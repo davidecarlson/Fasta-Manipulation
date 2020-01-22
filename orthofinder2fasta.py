@@ -4,6 +4,9 @@ import os
 import argparse
 from Bio import SeqIO
 
+###NOTE this script is currently very inefficient for processing large datasets. I should add some
+### multiprocessing to speed tings up
+
 parser = argparse.ArgumentParser(description="Take Orthofinder output file and produce separate nucleotide fasta files for each orthogroup")
 
 parser.add_argument('--orthogroups', required=True, help='Orthogroups.tsv file produced by Orthofinder', action='store')
